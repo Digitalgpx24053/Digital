@@ -1,0 +1,214 @@
+:root {
+  --bg-primary: #f4f4f4;
+  --bg-secondary: #ffffff;
+  --bg-dark: #121212;
+  --bg-card: #e0e0e0;
+  --text-primary: #333333;
+  --text-light: #ffffff;
+  --text-dark: #000000;
+  --accent: #2575fc;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-card: #2c2c2c;
+  --text-primary: #f4f4f4;
+  --text-dark: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Header */
+header {
+  background-color: var(--bg-secondary);
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body.dark .logo,
+body.dark nav a {
+  color: var(--text-dark);
+}
+
+/* Hero */
+#hero {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: var(--text-light);
+  text-align: center;
+  padding: 60px 0;
+}
+
+body.dark #hero {
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+}
+
+#hero .btn {
+  background-color: #fff;
+  color: var(--accent);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Benefícios */
+#beneficios {
+  padding: 60px 0;
+  background-color: var(--bg-secondary);
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item {
+  background-color: var(--bg-card);
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  font-size: 18px;
+  color: var(--text-primary);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark .item {
+  background-color: var(--bg-card);
+  color: var(--text-dark);
+}
+
+/* Depoimentos */
+#depoimentos {
+  padding: 60px 0;
+  background-color: var(--bg-secondary);
+  text-align: center;
+}
+
+blockquote {
+  font-size: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+cite {
+  display: block;
+  margin-top: 10px;
+  color: var(--text-primary);
+}
+
+/* Contato */
+#contato {
+  padding: 60px 0;
+  background-color: var(--bg-secondary);
+}
+
+#form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#form-contato input,
+#form-contato textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+}
+
+body.dark #form-contato input,
+body.dark #form-contato textarea {
+  background-color: #2c2c2c;
+  color: white;
+  border-color: #444;
+}
+
+#form-contato button {
+  padding: 10px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer .social a {
+  color: var(--text-primary);
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+body.dark footer,
+body.dark footer .social a {
+  color: var(--text-dark);
+}
+
+/* Botão Dark Mode */
+#darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 12px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+body.dark #darkModeToggle {
+  background-color: #fff;
+  color: #333;
+}
